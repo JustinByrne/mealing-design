@@ -11,45 +11,44 @@
     <body>
         <!-- Header -->
         <header>
-            <div class="w-full bg-green-500 p-3 text-white" x-data="{open: false}">
-                <div class="flex justify-between items-center">
-                    <div class="text-lg font-bold">
+            <div class="w-full bg-green-600 p-3 text-white lg:w-72 lg:h-screen" x-data="{open: false}">
+                <div class="flex justify-between items-center lg:mb-20 lg:mt-10">
+                    <div class="flex text-lg font-bold lg:text-center lg:w-full lg:flex-col">
+                        <i class="fas fa-pizza-slice pr-3 self-center lg:pr-0 lg:text-3xl lg:pb-3"></i>
                         Mealing
                     </div>
-                    <div class="text-lg">
-                        <button class="border border-gray-100 px-2 rounded-lg duration-300 ease-in-out transition text-center hover:bg-white hover:text-green-500" @click="open = !open">
+                    <div class="text-lg lg:hidden">
+                        <button class="border border-gray-100 px-2 rounded-lg duration-300 ease-in-out transition text-center hover:bg-white hover:text-green-600" @click="open = !open">
                             <i class="fas fa-bars"></i>
                         </button>
                     </div>
                 </div>
-                <div class="hidden mt-3" x-bind:class="{'hidden': !open}" @click.away="open = false">
-                    <nav class="">
-                        <ul>
-                            <li class="w-full p-3 mb-3 font-bold text-green-500 bg-white rounded-lg space-x-2">
-                                <i class="fas fa-home"></i>
-                                <span>
-                                    Home
-                                </span>
-                            </li>
-                            <li class="w-full p-3 mb-3 font-bold rounded-lg hover:bg-white hover:text-green-500 space-x-2">
-                                <i class="fas fa-utensils"></i>
-                                <span>
-                                    Menus
-                                </span>
-                            </li>
-                            <li class="w-full p-3 mb-3 font-bold rounded-lg hover:bg-white hover:text-green-500 space-x-2">
-                                <i class="fas fa-hamburger"></i>
-                                <span>
-                                    Meals
-                                </span>
-                            </li>
-                            <li class="w-full p-3 font-bold rounded-lg hover:bg-white hover:text-green-500 space-x-2">
-                                <i class="fas fa-tachometer-alt"></i>
-                                <span>
-                                    Admin
-                                </span>
-                            </li>
-                        </ul>
+                <div class="hidden lg:block mt-3" x-bind:class="{'hidden': !open}" @click.away="open = false">
+                    <nav class="flex flex-col">
+                        <a href="/" class="w-full p-3 mb-3 font-bold text-green-600 bg-white rounded-lg space-x-2">
+                            <i class="fas fa-home"></i>
+                            <span>
+                                Home
+                            </span>
+                        </a>
+                        <a href="/#" class="w-full p-3 mb-3 font-bold rounded-lg hover:bg-white hover:text-green-600 space-x-2">
+                            <i class="fas fa-utensils"></i>
+                            <span>
+                                Menus
+                            </span>
+                        </a>
+                        <a href="/#" class="w-full p-3 mb-3 font-bold rounded-lg hover:bg-white hover:text-green-600 space-x-2">
+                            <i class="fas fa-hamburger"></i>
+                            <span>
+                                Meals
+                            </span>
+                        </a>
+                        <a href="/#" class="w-full p-3 font-bold rounded-lg hover:bg-white hover:text-green-600 space-x-2">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>
+                                Admin
+                            </span>
+                        </a>
                     </nav>
                 </div>
             </div>

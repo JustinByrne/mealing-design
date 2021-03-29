@@ -22,7 +22,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="hidden mt-3" x-bind:class="{'hidden': !open}">
+                <div class="hidden mt-3" x-bind:class="{'hidden': !open}" @click.away="open = false">
                     <nav class="">
                         <ul>
                             <li class="w-full p-3 mb-3 font-bold text-green-500 bg-white rounded-lg space-x-2">

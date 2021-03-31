@@ -10,7 +10,7 @@
 
     <body class="flex flex-col lg:flex-row">
         <!-- Header -->
-        <header>
+        <header class="lg:fixed">
             <div class="w-full bg-green-600 p-3 text-white lg:w-72 lg:h-screen" x-data="{open: false}">
                 <div class="flex justify-between items-center lg:mb-20 lg:mt-10">
                     <div class="flex text-lg font-bold lg:text-center lg:w-full lg:flex-col">
@@ -53,14 +53,16 @@
                 </div>
             </div>
         </header>
-        <div class="p-4 lg:p-9 w-full">
+        <div class="p-4 lg:p-9 w-full lg:ml-72">
             <div class="flex flex-col lg:flex-row justify-between mb-8">
-                <div class="relative">
-                    <div class="absolute p-4 bg-green-600 bg-opacity-20 rounded-lg text-center text-green-600">
-                        <i class="fas fa-search fa-lg"></i>
+                <form action="" method="POST">
+                    <div class="relative">
+                        <button type="submit" class="absolute p-4 bg-green-600 bg-opacity-20 rounded-lg text-center text-green-600">
+                            <i class="fas fa-search fa-lg"></i>
+                        </button>
+                        <input class="w-full max-w-xs pl-20 py-4 border-0 bg-green-600 bg-opacity-10 rounded-lg placeholder-gray-400" type="text" placeholder="Search..." name="s">
                     </div>
-                    <input class="w-full max-w-xs pl-20 py-4 border-0 bg-green-600 bg-opacity-10 rounded-lg placeholder-gray-400" type="text" placeholder="Search...">
-                </div>
+                </form>
                 <div class="hidden lg:block p-4 text-right">
                     <p class="text-gray-600">
                         Name

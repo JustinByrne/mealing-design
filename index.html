@@ -50,14 +50,19 @@
                             </span>
                         </a>
                     </nav>
-                    <div class="w-full mb-3 font-bold">
-                        <div class="flex justify-between p-3">
+                    <div class="w-full font-bold lg:hidden" x-data="{open: false}" @click.away="open = false">
+                        <div class="flex justify-between p-3 items-center" @click="open = !open">
                             <p>
                                 Name
                             </p>
-                            <i class="fas fa-angle-down text-center"></i>
+                            <button>
+                                <i
+                                    class="fas text-center cursor-pointer"
+                                    :class="{ 'fa-angle-down': !open, 'fa-angle-up': open }"
+                                ></i>
+                            </button>
                         </div>
-                        <div class="w-full mb-3 font-bold text-green-600 bg-white rounded-lg space-x-2">
+                        <div class="w-full font-bold text-green-600 bg-white rounded-lg space-x-2" :class="{ 'hidden': !open }">
                             <ul class="text-left">
                                 <li class="px-3 py-2">
                                     Profile
@@ -75,6 +80,7 @@
             </div>
         </header>
         <div class="p-4 lg:p-9 w-full lg:ml-72">
+            <!-- Search Bar -->
             <div class="flex flex-col lg:flex-row justify-between mb-8">
                 <form action="" method="POST">
                     <div class="relative">
@@ -84,15 +90,20 @@
                         <input class="w-full max-w-xs pl-20 py-4 border-0 bg-green-600 bg-opacity-10 rounded-lg placeholder-gray-400" type="text" placeholder="Search..." name="s">
                     </div>
                 </form>
-                <div class="hidden lg:block p-4 text-right relative">
-                    <div class="text-gray-600 flex items-center space-x-2">
+                <div class="hidden lg:block p-4 text-right relative" x-data="{open: false}" @click.away="open = false">
+                    <div class="text-gray-600 flex items-center space-x-2" @click="open = !open">
                         <img class="rounded-full w-10 h-10 border-2 border-transparent hover:border-orange-300" src="https://www.gravatar.com/avatar/?s=36" alt="Justin">
                         <p>
                             Name
                         </p>
-                        <i class="fas fa-angle-down text-center"></i>
+                        <button>
+                            <i
+                                class="fas text-center cursor-pointer"
+                                :class="{ 'fa-angle-down': !open, 'fa-angle-up': open }"
+                            ></i>
+                        </button>
                     </div>
-                    <div class="absolute right-0 z-10">
+                    <div class="absolute right-0 z-10" :class="{ 'hidden': !open }">
                         <div class="w-48 shadow-md rounded-md mt-2 py-2 bg-white">
                             <ul class="text-left">
                                 <li class="px-2 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
@@ -108,9 +119,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-
             </div>
         </div>
     </body>

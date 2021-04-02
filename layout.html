@@ -50,7 +50,7 @@
                             </span>
                         </a>
                     </nav>
-                    <div class="w-full font-bold lg:hidden" x-data="{open: false}" @click.away="open = false">
+                    <div class="w-full font-bold lg:hidden" x-data="{ open: false }" @click.away="open = false">
                         <div class="flex justify-between p-3 items-center" @click="open = !open">
                             <p>
                                 Name
@@ -63,59 +63,61 @@
                             </button>
                         </div>
                         <div class="w-full font-bold text-green-600 bg-white rounded-lg space-x-2" :class="{ 'hidden': !open }">
-                            <ul class="text-left">
-                                <li class="px-3 py-2">
+                            <div class="flex flex-col text-left">
+                                <a href="#" class="px-3 py-2">
                                     Profile
-                                </li>
-                                <li class="px-3 py-2">
+                                </a>
+                                <a href="#" class="px-3 py-2">
                                     Settings
-                                </li>
-                                <li class="px-3 py-2">
-                                    Logout
-                                </li>
-                            </ul>
+                                </a>
+                                <form action="/logout" method="POST">
+                                    <button type="submit" class="px-3 py-2 font-bold w-full text-left">
+                                        Logout
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="p-4 lg:p-9 w-full lg:ml-72">
+        <div class="p-4 lg:p-6 w-full lg:ml-72">
             <!-- Search Bar -->
-            <div class="flex flex-col lg:flex-row justify-between mb-8">
+            <div class="flex flex-col lg:flex-row justify-between mb-4">
                 <form action="" method="POST">
                     <div class="relative">
-                        <button type="submit" class="absolute p-4 bg-green-600 bg-opacity-20 rounded-lg text-center text-green-600">
-                            <i class="fas fa-search fa-lg"></i>
+                        <button type="submit" class="absolute p-3 bg-green-600 bg-opacity-20 rounded-lg text-center text-green-600">
+                            <i class="fas fa-search"></i>
                         </button>
-                        <input class="w-full max-w-xs pl-20 py-4 border-0 bg-green-600 bg-opacity-10 rounded-lg placeholder-gray-400" type="text" placeholder="Search..." name="s">
+                        <input class="w-full max-w-xs pl-12 py-3 border-0 bg-green-600 bg-opacity-10 rounded-lg placeholder-gray-400" type="text" placeholder="Search..." name="s">
                     </div>
                 </form>
-                <div class="hidden lg:block p-4 text-right relative" x-data="{open: false}" @click.away="open = false">
-                    <div class="text-gray-600 flex items-center space-x-2" @click="open = !open">
+                <div class="hidden lg:block text-right relative" x-data="{ open: false }" @click.away="open = false">
+                    <div class="text-gray-600 flex items-center space-x-2 cursor-pointer" @click="open = !open">
                         <img class="rounded-full w-10 h-10 border-2 border-transparent hover:border-orange-300" src="https://www.gravatar.com/avatar/?s=36" alt="Justin">
                         <p>
                             Name
                         </p>
-                        <button>
+                        <button class="px-1.5">
                             <i
-                                class="fas text-center cursor-pointer"
+                                class="fas"
                                 :class="{ 'fa-angle-down': !open, 'fa-angle-up': open }"
                             ></i>
                         </button>
                     </div>
                     <div class="absolute right-0 z-10" :class="{ 'hidden': !open }">
-                        <div class="w-48 shadow-md rounded-md mt-2 py-2 bg-white">
-                            <ul class="text-left">
-                                <li class="px-2 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
-                                    Profile
-                                </li>
-                                <li class="px-2 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
-                                    Settings
-                                </li>
-                                <li class="px-2 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
+                        <div class="w-44 shadow-md rounded-md mt-1 py-2 bg-white text-left flex flex-col">
+                            <a href="#" class="mb-1 px-3 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
+                                Profile
+                            </a>
+                            <a href="#" class="mb-1 px-3 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
+                                Settings
+                            </a>
+                            <form action="/logout" method="POST">
+                                <button type="submit" class="w-full text-left mb-1 px-3 py-0.5 hover:bg-green-600 hover:bg-opacity-40">
                                     Logout
-                                </li>
-                            </ul>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

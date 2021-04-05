@@ -13,7 +13,7 @@
     <body>
         <div class="container mx-auto py-3">
             <!-- Typography -->
-            <section class="mb-3">
+            <section class="mb-6">
                 <h1 class="text-5xl font-black mb-3">
                     Elements
                 </h1>
@@ -21,7 +21,7 @@
                     Typography
                 </h2>
                 <p class="mb-3">
-                    Here are all the different headings and paragraphs.
+                    The hierarchy comes in three parts: headings, bold and regular body.
                 </p>
                 <div class="w-full rounded bg-gray-100 border border-gray-200 mb-3">
                     <div class="flex justify-between border-b border-gray-200 p-3">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <p class="mb-3">
-                    Different sizes and weights
+                    Below are bold and regular styles.
                 </p>
                 <div class="w-full rounded bg-gray-100 border border-gray-200">
                     <div class="flex justify-between border-b border-gray-200 p-3">
@@ -167,8 +167,9 @@
                     </div>
                 </div>
             </section>
+            
             <!-- Colours -->
-            <section class="mb-3">
+            <section class="mb-6">
                 <h2 class="text-4xl font-black mb-3">
                     Colours
                 </h2>
@@ -182,7 +183,8 @@
                             Primary
                         </p>
                         <p class="mb-3 font-light">
-                            green-600
+                            main: green-600<br>
+                            hover: green-500
                         </p>
                     </div>
                     <div>
@@ -191,27 +193,129 @@
                             Secondary
                         </p>
                         <p class="mb-3 font-light">
-                            gray-400
+                            main: gray-400<br>
+                            hover: gray-300
                         </p>
                     </div>
                     <div>
-                        <div class="rounded bg-yellow-400 h-56 mb-3"></div>
+                        <div class="rounded bg-yellow-500 h-56 mb-3"></div>
                         <p class="font-bold mb-3">
                             Accent
                         </p>
                         <p class="mb-3 font-light">
-                            yellow-400
+                            yellow-500
                         </p>
                     </div>
                 </div>
             </section>
+            
             <!-- Buttons -->
-            <section class="mb-3">
+            <section class="mb-6">
                 <h2 class="text-4xl font-black mb-3">
                     Buttons
                 </h2>
                 <p class="mb-3">
-                    This includes primary, secondary, disabled and all sizes.
+                    Buttons are available in three pre-defined types: primary, secondary and disabled.
+                </p>
+                <div class="flex space-x-3 mb-3">
+                    <button class="rounded shadow py-2 px-4 bg-green-600 text-white hover:bg-green-500">
+                        Primary
+                    </button>
+                    <button class="rounded shadow py-2 px-4 bg-gray-400 text-white hover:bg-gray-300">
+                        Secondary
+                    </button>
+                    <button class="rounded shadow py-2 px-4 bg-gray-300 text-gray-500 cursor-not-allowed">
+                        Disabled
+                    </button>
+                </div>
+                <p class="mb-3">
+                    There are three sizes: large, default and small.
+                </p>
+                <div class="flex items-start space-x-3 mb-3">
+                    <button class="rounded shadow py-3 px-8 bg-green-600 text-white hover:bg-green-500 text-lg">
+                        Large
+                    </button>
+                    <button class="rounded shadow py-2 px-4 bg-green-600 text-white hover:bg-green-500">
+                        Default
+                    </button>
+                    <button class="rounded shadow py-1 px-2 bg-green-600 text-white hover:bg-green-500 text-xs">
+                        Small
+                    </button>
+                </div>
+            </section>
+
+            <!-- Forms -->
+            <section class="mb-6">
+                <h2 class="text-4xl font-black mb-3">
+                    Forms
+                </h2>
+                <p class="mb-3">
+                    Just as with buttons there are two sizes per input field: medium and small.
+                </p>
+            </section>
+
+            <!-- Notifications -->
+            <section class="mb-6">
+                <h2 class="text-4xl font-black mb-3">
+                    Notifications
+                </h2>
+                <p class="mb-3">
+                    Use alerts to give users quick feedback on performed tasks.
+                </p>
+                <div class="mb-3 space-y-3">
+                    <div class="bg-green-400 bg-opacity-20 text-green-700 border-l-4 border-green-400 py-3 px-4">
+                        <i class="fas fa-check-circle mr-1"></i> Changes have been saved.
+                    </div>
+                    <div class="bg-red-400 bg-opacity-20 text-red-700 border-l-4 border-red-400 py-3 px-4">
+                        <i class="fas fa-exclamation-circle mr-1"></i> There has been an issue.
+                    </div>
+                    <div class="bg-yellow-400 bg-opacity-20 text-yellow-700 border-l-4 border-yellow-400 py-3 px-4">
+                        <i class="fas fa-exclamation-triangle mr-1"></i> There are warnings being shown.
+                    </div>
+                    <div class="bg-blue-400 bg-opacity-20 text-blue-700 border-l-4 border-blue-400 py-3 px-4">
+                        <i class="fas fa-info-circle mr-1"></i> This information may be useful.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cards -->
+            <section class="mb-6">
+                <h2 class="text-4xl font-black mb-3">
+                    Cards
+                </h2>
+                <p class="mb-3">
+                    A card is composed of a header and a container. Headers may include buttons and dropdowns for additional actions.
+                </p>
+            </section>
+
+            <!-- Progress Bars -->
+            <section class="mb-6">
+                <h2 class="text-4xl font-black mb-3">
+                    Progress Bars
+                </h2>
+                <p class="mb-3">
+                    Progress bar chart can help you to monitor progress towards a target.
+                </p>
+                <div class="grid grid-cols-3 gap-10 mb-3">
+                    <div class="w-full h-1 rounded-full bg-gray-200 relative">
+                        <div class="w-1/12 h-1 rounded-full bg-red-600 absolute left-0"></div>
+                    </div>
+                    <div class="w-full h-1 rounded-full bg-gray-200 relative">
+                        <div class="w-1/2 h-1 rounded-full bg-yellow-600 absolute left-0"></div>
+                    </div>
+                    <div class="w-full h-1 rounded-full bg-gray-200 relative">
+                        <div class="w-4/5 h-1 rounded-full bg-green-600 absolute left-0"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tables -->
+            <section class="mb-6">
+                <h2 class="text-4xl font-black mb-3">
+                    Tables
+                </h2>
+                <p class="mb-3">
+                    Built with headers and rows, a table is useful to display many items or content with measurable data.
                 </p>
             </section>
         </div>

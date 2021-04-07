@@ -5,7 +5,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover']
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

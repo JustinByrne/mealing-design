@@ -338,6 +338,185 @@
                 <p class="mb-3">
                     A card is composed of a header and a container. Headers may include buttons and dropdowns for additional actions.
                 </p>
+                <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 mb-3">
+                    <div class="w-full p-4 bg-gray-100 border-b border-gray-200 rounded-t-md">
+                        <p>
+                            Title
+                        </p>
+                    </div>
+                    <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 justify-between p-4 bg-gray-100 border-b border-gray-200 rounded-t-md">
+                        <p>
+                            Title
+                        </p>
+                        <button class="w-full lg:w-auto rounded shadow-md py-1 px-2 bg-green-600 text-white hover:bg-green-500 text-xs">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 justify-between p-4 bg-gray-100 border-b border-gray-200 lg:items-center rounded-t-md">
+                        <p>
+                            Title
+                        </p>
+                        <select class="border-1 border-gray-100 shadow bg-opacity-20 rounded-lg placeholder-gray-500 text-xs w-full lg:w-60 focus:outline-none focus:ring-1 focus:border-green-500 focus:ring-green-500">
+                            <option>
+                                Dropdown
+                            </option>
+                        </select>
+                    </div>
+                    <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 justify-between p-4 bg-gray-100 border-b border-gray-200 lg:items-center rounded-t-md">
+                        <p>
+                            Title
+                        </p>
+                        <div class="space-y-2 lg:space-y-0 lg:space-x-2">
+                            <select class="border-1 border-gray-100 shadow bg-opacity-20 rounded-lg placeholder-gray-500 text-xs w-full lg:w-60 focus:outline-none focus:ring-1 focus:border-green-500 focus:ring-green-500">
+                                <option>
+                                    Dropdown
+                                </option>
+                            </select>
+                            <button class="w-full lg:w-auto rounded shadow-md py-1 px-2 bg-green-600 text-white hover:bg-green-500 text-xs">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 px-4 bg-gray-100 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md" x-data="{tab: 'one'}">
+                        <div
+                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            :class="{ 'border-b-2 border-green-600 text-black': tab === 'one' }"
+                            @click.prevent="tab = 'one'"
+                        >
+                            Tab One
+                        </div>
+                        <div
+                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            :class="{ 'border-b-2 border-green-600 text-black': tab === 'two' }"
+                            @click.prevent="tab = 'two'"
+                        >
+                            Tab Two
+                        </div>
+                        <div
+                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            :class="{ 'border-b-2 border-green-600 text-black': tab === 'three' }"
+                            @click.prevent="tab = 'three'"
+                        >
+                            Tab Three
+                        </div>
+                        <div
+                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            :class="{ 'border-b-2 border-green-600 text-black': tab === 'four' }"
+                            @click.prevent="tab = 'four'"
+                        >
+                            Tab Four
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mb-3">
+                    <p class="mb-3">
+                        There will be times when the title is on top of the card and others where an image will be.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <div class="w-full rounded-md shadow-md">
+                            <div>
+                                <img src="https://loremflickr.com/640/360/kitten?random=1" class="w-full max-h-32 object-cover rounded-t-md">
+                            </div>
+                            <div class="bg-white p-4 rounded-b-md">
+                                <p class="font-bold mb-2">
+                                    Spanish Salad
+                                </p>
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-md shadow-md">
+                            <div>
+                                <img src="https://loremflickr.com/640/360/kitten?random=2" class="w-full max-h-32 object-cover rounded-t-md">
+                            </div>
+                            <div class="bg-white p-4 rounded-b-md">
+                                <p class="font-bold mb-2">
+                                    Spanish Salad
+                                </p>
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-md shadow-md">
+                            <div>
+                                <img src="https://loremflickr.com/640/360/kitten?random=3" class="w-full max-h-32 object-cover rounded-t-md">
+                            </div>
+                            <div class="bg-white p-4 rounded-b-md">
+                                <p class="font-bold mb-2">
+                                    Spanish Salad
+                                </p>
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-md shadow-md">
+                            <div>
+                                <img src="https://loremflickr.com/640/360/kitten?random=4" class="w-full max-h-32 object-cover rounded-t-md">
+                            </div>
+                            <div class="bg-white p-4 rounded-b-md">
+                                <p class="font-bold mb-2">
+                                    Spanish Salad
+                                </p>
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-md shadow-md">
+                            <div>
+                                <img src="https://loremflickr.com/640/360/kitten?random=5" class="w-full max-h-32 object-cover rounded-t-md">
+                            </div>
+                            <div class="bg-white p-4 rounded-b-md">
+                                <p class="font-bold mb-2">
+                                    Spanish Salad
+                                </p>
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-md shadow-md">
+                            <div>
+                                <img src="https://loremflickr.com/640/360/kitten?random=6" class="w-full max-h-32 object-cover rounded-t-md">
+                            </div>
+                            <div class="bg-white p-4 rounded-b-md">
+                                <p class="font-bold mb-2">
+                                    Spanish Salad
+                                </p>
+                                <p class="text-sm text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Progress Bars -->

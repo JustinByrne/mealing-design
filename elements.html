@@ -340,12 +340,12 @@
                 </p>
                 <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5 mb-3">
                     <div class="w-full p-4 bg-gray-100 border-b border-gray-200 rounded-t-md">
-                        <p>
+                        <p class="font-bold">
                             Title
                         </p>
                     </div>
                     <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 justify-between p-4 bg-gray-100 border-b border-gray-200 rounded-t-md">
-                        <p>
+                        <p class="font-bold">
                             Title
                         </p>
                         <button class="w-full lg:w-auto rounded shadow-md py-1 px-2 bg-green-600 text-white hover:bg-green-500 text-xs">
@@ -353,7 +353,7 @@
                         </button>
                     </div>
                     <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 justify-between p-4 bg-gray-100 border-b border-gray-200 lg:items-center rounded-t-md">
-                        <p>
+                        <p class="font-bold">
                             Title
                         </p>
                         <select class="border-1 border-gray-100 shadow bg-opacity-20 rounded-lg placeholder-gray-500 text-xs w-full lg:w-60 focus:outline-none focus:ring-1 focus:border-green-500 focus:ring-green-500">
@@ -363,7 +363,7 @@
                         </select>
                     </div>
                     <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 justify-between p-4 bg-gray-100 border-b border-gray-200 lg:items-center rounded-t-md">
-                        <p>
+                        <p class="font-bold">
                             Title
                         </p>
                         <div class="space-y-2 lg:space-y-0 lg:space-x-2">
@@ -379,28 +379,28 @@
                     </div>
                     <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 px-4 bg-gray-100 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md" x-data="{tab: 'one'}">
                         <div
-                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'one' }"
                             @click.prevent="tab = 'one'"
                         >
                             Tab One
                         </div>
                         <div
-                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'two' }"
                             @click.prevent="tab = 'two'"
                         >
                             Tab Two
                         </div>
                         <div
-                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'three' }"
                             @click.prevent="tab = 'three'"
                         >
                             Tab Three
                         </div>
                         <div
-                            class="py-4 bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'four' }"
                             @click.prevent="tab = 'four'"
                         >
@@ -412,7 +412,7 @@
                     <p class="mb-3">
                         There will be times when the title is on top of the card and others where an image will be.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-3">
                         <div class="w-full rounded-md shadow-md">
                             <div>
                                 <img src="https://loremflickr.com/640/360/kitten?random=1" class="w-full max-h-32 object-cover rounded-t-md">
@@ -512,6 +512,84 @@
                                     <i class="fas fa-star-half-alt"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-200 grid grid-cols-1 lg:grid-cols-2 gap-5 p-10">
+                        <div class="w-full rounded-md shadow-md bg-white">
+                            <div class="w-full p-4 border-b border-gray-200">
+                                <p class="font-bold">
+                                    Title
+                                </p>
+                            </div>
+                            <div class=" p-3">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque odit, rem praesentium dicta hic asperiores ducimus laborum deleniti quo beatae culpa dolore commodi facere iusto ut suscipit unde aut?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full rounded-md shadow-md bg-white" x-data="{tab: 'one'}">
+                            <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 px-4 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md">
+                                <div
+                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    :class="{ 'border-b-2 border-green-600 text-black': tab === 'one' }"
+                                    @click.prevent="tab = 'one'"
+                                >
+                                    Tab One
+                                </div>
+                                <div
+                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    :class="{ 'border-b-2 border-green-600 text-black': tab === 'two' }"
+                                    @click.prevent="tab = 'two'"
+                                >
+                                    Tab Two
+                                </div>
+                                <div
+                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    :class="{ 'border-b-2 border-green-600 text-black': tab === 'three' }"
+                                    @click.prevent="tab = 'three'"
+                                >
+                                    Tab Three
+                                </div>
+                                <div
+                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    :class="{ 'border-b-2 border-green-600 text-black': tab === 'four' }"
+                                    @click.prevent="tab = 'four'"
+                                >
+                                    Tab Four
+                                </div>
+                            </div>
+                            <div
+                                class="p-3"
+                                :class="{ 'hidden': tab !== 'one' }"
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque odit, rem praesentium dicta hic asperiores ducimus laborum deleniti quo beatae culpa dolore commodi facere iusto ut suscipit unde aut? one
+                                </p>
+                            </div>
+                            <div
+                                class="p-3"
+                                :class="{ 'hidden': tab !== 'two' }"
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque odit, rem praesentium dicta hic asperiores ducimus laborum deleniti quo beatae culpa dolore commodi facere iusto ut suscipit unde aut? two
+                                </p>
+                            </div>
+                            <div
+                                class="p-3"
+                                :class="{ 'hidden': tab !== 'three' }"
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque odit, rem praesentium dicta hic asperiores ducimus laborum deleniti quo beatae culpa dolore commodi facere iusto ut suscipit unde aut? three
+                                </p>
+                            </div>
+                            <div
+                                class="p-3"
+                                :class="{ 'hidden': tab !== 'four' }"
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque odit, rem praesentium dicta hic asperiores ducimus laborum deleniti quo beatae culpa dolore commodi facere iusto ut suscipit unde aut? four
                                 </p>
                             </div>
                         </div>

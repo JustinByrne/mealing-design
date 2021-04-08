@@ -379,16 +379,15 @@
                     </div>
                     <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 lg:px-1 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md bg-gray-100" x-data="{tab: 'one', title: 'Tab One', show: false}" @click.away="show = false">
                         <div class="block lg:hidden relative p-4 font-bold text-black border-b-2 border-green-600">
-                            <div class="flex justify-between items-center">
+                            <div class="flex justify-between items-center" @click.prevent="show = !show">
                                 <span x-text="title"></span>
                                 <i
                                     class="fa"
                                     :class="{ 'fa-angle-down': !show, 'fa-angle-up': show }"
-                                    @click.prevent="show = !show"
                                 ></i>
                             </div>
                             <div
-                                class="absolute w-full bg-white rounded-b-md border left-0 top-14"
+                                class="absolute w-full bg-white rounded-b-md border left-0 top-14 shadow-md"
                                 :class="{'hidden': show === false}"
                             >
                                 <div
@@ -571,16 +570,15 @@
                         <div class="w-full rounded-md shadow-md bg-white" x-data="{tab: 'one', title: 'Tab One', show: false}" @click.away="show = false">
                             <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 lg:px-1 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md">
                                 <div class="block lg:hidden relative p-4 font-bold text-black border-b-2 border-green-600">
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex justify-between items-center" @click.prevent="show = !show">
                                         <span x-text="title"></span>
                                         <i
                                             class="fa"
                                             :class="{ 'fa-angle-down': !show, 'fa-angle-up': show }"
-                                            @click.prevent="show = !show"
                                         ></i>
                                     </div>
                                     <div
-                                        class="absolute w-full bg-white rounded-b-md border left-0 top-14"
+                                        class="absolute w-full bg-white rounded-b-md border left-0 top-14 shadow-md"
                                         :class="{'hidden': show === false}"
                                     >
                                         <div

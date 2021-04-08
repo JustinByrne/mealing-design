@@ -377,30 +377,69 @@
                             </button>
                         </div>
                     </div>
-                    <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 px-4 bg-gray-100 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md" x-data="{tab: 'one'}">
+                    <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 lg:px-1 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md bg-gray-100" x-data="{tab: 'one', title: 'Tab One', show: false}" @click.away="show = false">
+                        <div class="block lg:hidden relative p-4 font-bold text-black border-b-2 border-green-600">
+                            <div class="flex justify-between items-center">
+                                <span x-text="title"></span>
+                                <i
+                                    class="fa"
+                                    :class="{ 'fa-angle-down': !show, 'fa-angle-up': show }"
+                                    @click.prevent="show = !show"
+                                ></i>
+                            </div>
+                            <div
+                                class="absolute w-full bg-white rounded-b-md border left-0 top-14"
+                                :class="{'hidden': show === false}"
+                            >
+                                <div
+                                    class="w-full p-4"
+                                    @click.prevent="tab = 'one', title = 'Tab One', show = false"
+                                >
+                                    Tab One
+                                </div>
+                                <div
+                                    class="w-full p-4"
+                                    @click.prevent="tab = 'two', title = 'Tab Two', show = false"
+                                >
+                                    Tab Two
+                                </div>
+                                <div
+                                    class="w-full p-4"
+                                    @click.prevent="tab = 'three', title = 'Tab Three', show = false"
+                                >
+                                    Tab Three
+                                </div>
+                                <div
+                                    class="w-full p-4"
+                                    @click.prevent="tab = 'four', title = 'Tab Four', show = false"
+                                >
+                                    Tab Four
+                                </div>
+                            </div>
+                        </div>
                         <div
-                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="hidden lg:block p-4 lg:p-0 lg:py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'one' }"
                             @click.prevent="tab = 'one'"
                         >
                             Tab One
                         </div>
                         <div
-                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'two' }"
                             @click.prevent="tab = 'two'"
                         >
                             Tab Two
                         </div>
                         <div
-                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'three' }"
                             @click.prevent="tab = 'three'"
                         >
                             Tab Three
                         </div>
                         <div
-                            class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                            class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                             :class="{ 'border-b-2 border-green-600 text-black': tab === 'four' }"
                             @click.prevent="tab = 'four'"
                         >
@@ -516,7 +555,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full bg-gray-200 grid grid-cols-1 lg:grid-cols-2 gap-5 p-10 mb-3">
+                    <div class="w-full bg-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-5 p-10 mb-3">
                         <div class="w-full rounded-md shadow-md bg-white">
                             <div class="w-full p-4 border-b border-gray-200">
                                 <p class="font-bold">
@@ -529,31 +568,70 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="w-full rounded-md shadow-md bg-white" x-data="{tab: 'one'}">
-                            <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 px-4 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md">
+                        <div class="w-full rounded-md shadow-md bg-white" x-data="{tab: 'one', title: 'Tab One', show: false}" @click.away="show = false">
+                            <div class="w-full flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-3 lg:px-1 border-b border-gray-200 lg:items-center text-gray-400 rounded-t-md">
+                                <div class="block lg:hidden relative p-4 font-bold text-black border-b-2 border-green-600">
+                                    <div class="flex justify-between items-center">
+                                        <span x-text="title"></span>
+                                        <i
+                                            class="fa"
+                                            :class="{ 'fa-angle-down': !show, 'fa-angle-up': show }"
+                                            @click.prevent="show = !show"
+                                        ></i>
+                                    </div>
+                                    <div
+                                        class="absolute w-full bg-white rounded-b-md border left-0 top-14"
+                                        :class="{'hidden': show === false}"
+                                    >
+                                        <div
+                                            class="w-full p-4"
+                                            @click.prevent="tab = 'one', title = 'Tab One', show = false"
+                                        >
+                                            Tab One
+                                        </div>
+                                        <div
+                                            class="w-full p-4"
+                                            @click.prevent="tab = 'two', title = 'Tab Two', show = false"
+                                        >
+                                            Tab Two
+                                        </div>
+                                        <div
+                                            class="w-full p-4"
+                                            @click.prevent="tab = 'three', title = 'Tab Three', show = false"
+                                        >
+                                            Tab Three
+                                        </div>
+                                        <div
+                                            class="w-full p-4"
+                                            @click.prevent="tab = 'four', title = 'Tab Four', show = false"
+                                        >
+                                            Tab Four
+                                        </div>
+                                    </div>
+                                </div>
                                 <div
-                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                                     :class="{ 'border-b-2 border-green-600 text-black': tab === 'one' }"
                                     @click.prevent="tab = 'one'"
                                 >
                                     Tab One
                                 </div>
                                 <div
-                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                                     :class="{ 'border-b-2 border-green-600 text-black': tab === 'two' }"
                                     @click.prevent="tab = 'two'"
                                 >
                                     Tab Two
                                 </div>
                                 <div
-                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                                     :class="{ 'border-b-2 border-green-600 text-black': tab === 'three' }"
                                     @click.prevent="tab = 'three'"
                                 >
                                     Tab Three
                                 </div>
                                 <div
-                                    class="py-4 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
+                                    class="hidden lg:block p-4 lg:px-0 font-bold cursor-pointer hover:text-black hover:border-b-2 hover:border-green-600"
                                     :class="{ 'border-b-2 border-green-600 text-black': tab === 'four' }"
                                     @click.prevent="tab = 'four'"
                                 >

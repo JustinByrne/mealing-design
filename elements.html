@@ -401,24 +401,28 @@
                             >
                                 <div
                                     class="w-full p-4"
+                                    :class="{'hidden': tab === 'one'}"
                                     @click.prevent="tab = 'one', title = 'Tab One', show = false"
                                 >
                                     Tab One
                                 </div>
                                 <div
                                     class="w-full p-4"
+                                    :class="{'hidden': tab === 'two'}"
                                     @click.prevent="tab = 'two', title = 'Tab Two', show = false"
                                 >
                                     Tab Two
                                 </div>
                                 <div
                                     class="w-full p-4"
+                                    :class="{'hidden': tab === 'three'}"
                                     @click.prevent="tab = 'three', title = 'Tab Three', show = false"
                                 >
                                     Tab Three
                                 </div>
                                 <div
                                     class="w-full p-4"
+                                    :class="{'hidden': tab === 'four'}"
                                     @click.prevent="tab = 'four', title = 'Tab Four', show = false"
                                 >
                                     Tab Four
@@ -592,24 +596,28 @@
                                     >
                                         <div
                                             class="w-full p-4"
+                                            :class="{'hidden': tab === 'one'}"
                                             @click.prevent="tab = 'one', title = 'Tab One', show = false"
                                         >
                                             Tab One
                                         </div>
                                         <div
                                             class="w-full p-4"
+                                            :class="{'hidden': tab === 'two'}"
                                             @click.prevent="tab = 'two', title = 'Tab Two', show = false"
                                         >
                                             Tab Two
                                         </div>
                                         <div
                                             class="w-full p-4"
+                                            :class="{'hidden': tab === 'three'}"
                                             @click.prevent="tab = 'three', title = 'Tab Three', show = false"
                                         >
                                             Tab Three
                                         </div>
                                         <div
                                             class="w-full p-4"
+                                            :class="{'hidden': tab === 'four'}"
                                             @click.prevent="tab = 'four', title = 'Tab Four', show = false"
                                         >
                                             Tab Four

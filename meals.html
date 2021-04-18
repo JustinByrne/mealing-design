@@ -246,10 +246,13 @@
                                             Ratings
                                         </div>
                                         <div class="block lg:hidden">
-                                            +
+                                            <i
+                                                class="fas"
+                                                :class="{ 'fa-plus': !open, 'fa-minus': open }"
+                                            ></i>
                                         </div>
                                     </div>
-                                    <div class="lg:block" :class="{ 'hidden': open == false }">
+                                    <div class="lg:block" :class="{ 'hidden': !open }">
                                         <p class="dark:text-gray-200">
                                             <input type="checkbox" checked class="rounded mr-2 text-green-600 focus:outline-none focus:ring-1 focus:border-green-500 focus:ring-green-500 dark:bg-gray-900 dark:border-transparent dark:text-gray-200 dark:focus:bg-green-600">
                                             All
